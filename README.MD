@@ -21,3 +21,14 @@ const controller: StaticCacheController = new StaticCacheController({
 });
 ```
 *StaticCacheController* - realises singleton pattern, if you'll try to create more than one instance it will return you existed one 
+
+# Examples
+
+You can find some examples in folder 'examples'
+Just run ```npm run serve:examples``` and navigate to http://localhost/
+
+# Commands
+
+```npm run watch``` - ts build watcher
+
+```npm run build``` - builds project by ts-compiler

@@ -5,14 +5,13 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
-    "test": "jest",
     "watch": "tsc --project --watch tsconfig.json",
     "build": "tsc --project tsconfig.json",
     "serve:examples": "node examples/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/essaenko/offline-static-cache.git"
+    "url": "git+https://github.com/essaenko/js-static-cache.git"
   },
   "keywords": [
     "javascript",
@@ -24,9 +23,9 @@
   "author": "Evgeniy Saenko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/essaenko/offline-static-cache/issues"
+    "url": "https://github.com/essaenko/js-static-cache/issues"
   },
-  "homepage": "https://github.com/essaenko/offline-static-cache#readme",
+  "homepage": "https://github.com/essaenko/js-static-cache#readme",
   "devDependencies": {
     "@types/jest": "^26.0.23",
     "jest": "^26.6.3",
