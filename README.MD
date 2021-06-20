@@ -3,6 +3,10 @@
 As we can see, web surfing became more mobile and there is no guarantee that your user will always on 4g/5g connection, so here we should deliver to our users some offline functionality.
 This library will help you easily add offline cache of all GET request for your app. Without complicated setup, a lot of settings and any other things, simple resource caching.
 
+# Installation
+
+```npm i js-static-cache```
+
 # Usage
 
 All is you need it's array of resources or URL's to be cached, you can find plugin or library that will handle this job for you by your build lib (parcel, webpack, etc).
@@ -32,3 +36,7 @@ Just run ```npm run serve:examples``` and navigate to http://localhost/
 ```npm run watch``` - ts build watcher
 
 ```npm run build``` - builds project by ts-compiler
+
+# npm page
+
+https://www.npmjs.com/package/js-static-cache

@@ -1,6 +1,6 @@
 {
   "name": "js-static-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provide functionality for caching all application resources and GET requests",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -13,6 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/essaenko/js-static-cache.git"
   },
+  "files": [
+    "build",
+    "README.MD"
+  ],
   "keywords": [
     "javascript",
     "offline",
