@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "esnext",
+      "webworker",
+    ],
+    "module": "amd",
+    "moduleResolution": "node",
+    "outDir": "./build",
+    "outFile": "./build/index.js",
+    "declaration": true,
+  },
+  "include": [
+    "src/*.ts"
+  ],
+  "exclude": [
+    "*.types.ts",
+    "*.test.ts",
+  ]
+}

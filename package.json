@@ -1,0 +1,37 @@
+{
+  "name": "js-static-cache",
+  "version": "1.0.0",
+  "description": "Provide functionality for caching all application resources and GET requests",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "watch": "tsc --project --watch tsconfig.json",
+    "build": "tsc --project tsconfig.json",
+    "serve:examples": "node examples/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/essaenko/offline-static-cache.git"
+  },
+  "keywords": [
+    "javascript",
+    "offline",
+    "cache",
+    "pwa",
+    "service-worker"
+  ],
+  "author": "Evgeniy Saenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/essaenko/offline-static-cache/issues"
+  },
+  "homepage": "https://github.com/essaenko/offline-static-cache#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.6",
+    "typescript": "^4.3.3"
+  },
+  "dependencies": {}
+}

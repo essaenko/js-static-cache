@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      * {
+        font-family: Arial sans-serif !important;
+      }
+      #app {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+      }
+
+      .news-item {
+        padding: 20px;
+      }
+
+      .news-item span:first-of-type {
+        color: gray;
+        display: block;
+        text-transform: capitalize;
+      }
+
+      .news-item span:last-of-type {
+        display: block;
+        margin: 10px;
+      }
+
+      img {
+        width: 75%;
+        border-radius: 10px;
+        display: block;
+        margin: auto;
+      }
+    </style>
+</head>
+<body>
+<h1>News letter</h1>
+<div id="app">
+</div>
+<script>
+  /**
+   * In this worker we call StaticCacheController with debug mode and manifest: ['/index.html', '/news', '/']
+   */
+  navigator.serviceWorker.register('./index.js');
+</script>
+<script>
+  const news = fetch('/news');
+  news.then((response) => {
+    if (response.status === 200) {
+      return response.json();
+    }
+  }).then((json) => {
+    json.forEach((news) => {
+      const newsBlock = document.createElement('div');
+      const titleBlock = document.createElement('h2');
+      const categoryBlock = document.createElement('span');
+      const bodyBlock = document.createElement('p');
+      const dateBlock = document.createElement('span');
+      titleBlock.innerText = news.title;
+      categoryBlock.innerText = news.category;
+      bodyBlock.innerHTML = news.body;
+      dateBlock.innerText = news.date;
+
+      newsBlock.append(titleBlock, categoryBlock, dateBlock);
+
+      if (news.preview) {
+        const previewBlock = document.createElement('img');
+        previewBlock.src = news.preview;
+        newsBlock.append(previewBlock);
+      }
+      newsBlock.append(bodyBlock);
+
+      newsBlock.classList.add('news-item');
+
+      document.getElementById('app').append(newsBlock);
+    });
+  })
+</script>
+</body>
+</html>
