@@ -253,7 +253,6 @@
             shouldProcessRequests: false
           });
           self.addEventListener('fetch', controller.onFetch);
-          self.addEventListener('message', controller.onMessage);
         }
       }, {
         "../../src": "3rfh7",

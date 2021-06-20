@@ -100,10 +100,6 @@ export class StaticCacheController {
     event.respondWith(this.handleFetchEvent(event));
   }
 
-  public onMessage = async (event: MessageEvent): Promise<void> => {
-    console.log(event);
-  }
-
   public clearCaches = async (): Promise<void> => {
     await this.removeOutdatedCache();
   }

@@ -13,6 +13,8 @@ All is you need it's array of resources or URL's to be cached, you can find plug
 
 Next create (if you don't do it already) service worker file and instantiate StaticCacheController at start of script.
 
+Don't forget add fetch event listener to globalObject with controller handler
+
 ```typescript
 import { StaticCacheController } from "@essaenko/js-static-cache";
 
@@ -23,6 +25,8 @@ const controller: StaticCacheController = new StaticCacheController({
   shouldProcessRequests: true, // Optional field: if you want to cache all sent GET requests - set this field to true, false by default
   debug: true // Optional field: This option can get you some information for debugging
 });
+
+self.addEventListener('fetch', controller.onFetch);
 ```
 *StaticCacheController* - realises singleton pattern, if you'll try to create more than one instance it will return you existed one 
 
